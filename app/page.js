@@ -1,11 +1,11 @@
+import { General } from "@/components/Cards/General";
 import { Button } from "@/components/ui/button";
 
 
 export default function Home() {
   return (
-    <>
-      <p>Home Page</p>
-      <Button variant="outline">Button</Button>
-    </>
+    <div className="grid grid-cols-2">
+      <General/>
+    </div>
   );
 }
