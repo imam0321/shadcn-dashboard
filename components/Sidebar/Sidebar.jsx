@@ -1,6 +1,5 @@
-import React from 'react'
 import { UserItem } from '../UserItem/UserItem'
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '../ui/command'
+import { Command, CommandGroup, CommandItem, CommandList, CommandSeparator } from '../ui/command'
 import { Bell, Cookie, Inbox, MessageSquare, Settings, User, WalletMinimal } from 'lucide-react'
 
 export const Sidebar = () => {
@@ -52,15 +51,15 @@ export const Sidebar = () => {
     }
   ]
   return (
-    <div className='flex flex-col w-[300px] min-w-[300px] border-r min-h-screen p-4 gap-4'>
+    <div className='fixed flex flex-col w-[300px] min-w-[300px] border-r min-h-screen p-4 gap-4'>
       <UserItem />
       <div className="grow">
-        <Command style={{ overflow: "visible"}}>
-          <CommandList style={{ overflow: "visible"}}>
+        <Command style={{ overflow: "visible" }}>
+          <CommandList style={{ overflow: "visible" }}>
             {
-              menuList.map((menu, index) => <>
-                <CommandGroup key={index} heading={menu.group}>
-                  {menu.items.map((item, index) => <CommandItem key={index} className="flex gap-2">{item.icon}{item.text}</CommandItem>)}
+              menuList.map((menu) => <>
+                <CommandGroup key={menu.group} heading={menu.group}>
+                  {menu.items.map((item) => <CommandItem key={item.text} className="flex gap-2">{item.icon}{item.text}</CommandItem>)}
 
                 </CommandGroup>
                 <CommandSeparator />
@@ -70,7 +69,7 @@ export const Sidebar = () => {
         </Command>
       </div>
 
-      <div className="">Setting</div>
+      <div>Setting</div>
     </div>
   )
 }
