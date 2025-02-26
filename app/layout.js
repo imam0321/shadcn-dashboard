@@ -25,8 +25,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-between items-start`}
       >
-        <Sidebar />
-        <main className="w-full h-full pl-[300px]">
+        <div className="hidden md:flex min-w-[300px] min-h-screen">
+          <Sidebar />
+        </div>
+        <main className="w-full h-full">
           <Header />
           <div className="p-2">{children}</div>
         </main>

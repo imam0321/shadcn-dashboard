@@ -12,14 +12,14 @@ import {
 export default function Home() {
   return (
     <div className="grid gap-4">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 w-full">
         <General />
         <div className="grid gap-4">
           <Calendar />
           <Calendar />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 h-[300px] overflow-hidden">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-4 md:h-[300px] overflow-hidden">
         <Lines />
         <Card className="p-1 overflow-y-scroll">
           <CardHeader className="p-1">

@@ -51,7 +51,7 @@ export const Sidebar = () => {
     }
   ]
   return (
-    <div className='fixed flex flex-col w-[300px] min-w-[300px] border-r min-h-screen p-4 gap-4'>
+    <div className='fixed flex flex-col w-[300px] min-w-[300px] min-h-screen border-r p-4 gap-4'>
       <UserItem />
       <div className="grow">
         <Command style={{ overflow: "visible" }}>
