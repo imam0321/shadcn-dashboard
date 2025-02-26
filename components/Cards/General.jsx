@@ -372,7 +372,7 @@ export const General = () => {
         <CardTitle>This Week</CardTitle>
         <CardDescription>Those are the results of this week.</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-2 h-[300px]">
+      <CardContent className="grid gap-2 h-[400px]">
         <MyResponsiveBump data={data} />
       </CardContent>
 
